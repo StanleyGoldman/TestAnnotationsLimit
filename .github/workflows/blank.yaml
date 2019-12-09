@@ -1,17 +1,22 @@
 name: CI
-
 on: [push]
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
+    - name: Script
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        echo "::warning file=SampleTextFile.txt,line=1,col=0::Simple warning message 1"
+        echo "::warning file=SampleTextFile.txt,line=2,col=0::Simple warning message 2"
+        echo "::warning file=SampleTextFile.txt,line=3,col=0::Simple warning message 3"
+        echo "::warning file=SampleTextFile.txt,line=4,col=0::Simple warning message 4"
+        echo "::warning file=SampleTextFile.txt,line=1,col=0::Simple warning message 5"
+        echo "::warning file=SampleTextFile.txt,line=2,col=0::Simple warning message 6"
+        echo "::warning file=SampleTextFile.txt,line=3,col=0::Simple warning message 7"
+        echo "::warning file=SampleTextFile.txt,line=4,col=0::Simple warning message 8"
+        echo "::warning file=SampleTextFile.txt,line=1,col=0::Simple warning message 9"
+        echo "::warning file=SampleTextFile.txt,line=2,col=0::Simple warning message 10"
+        echo "::warning file=SampleTextFile.txt,line=3,col=0::Simple warning message 11"
+        echo "::warning file=SampleTextFile.txt,line=4,col=0::Simple warning message 12"
+        echo "::error file=SampleTextFile.txt,line=4,col=0::Simple error message 13"        
